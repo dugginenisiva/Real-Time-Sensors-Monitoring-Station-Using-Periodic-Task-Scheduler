@@ -9,7 +9,7 @@ ADCR=0X00200400; //set PDN and Pclk pins
 
 unsigned int adc_read(unsigned int ch_num){
 unsigned int result;
-+
+
 ADCR|=(1<<ch_num);	//Select channels
 ADCR|=(1<<24); //start adc
 while(done == 0);
